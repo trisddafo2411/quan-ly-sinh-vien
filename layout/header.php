@@ -8,10 +8,13 @@
 		<link rel="stylesheet" href="public/css/style.css">
 	</head>
 	<body>
+		<?php 
+		global $c;
+		?>
 		<div class="container" style="margin-top:20px;">
-			<a href="/" class="active btn btn-info">Students</a>
-			<a href="../subject/list.html" class=" btn btn-info">Subject</a>
-			<a href="../register/list.html" class=" btn btn-info">Register</a>
+			<a href="/" class="<?=$c=='student' ? "active" : ""?> btn btn-info">Students</a>
+			<a href="/?c=subject" class="<?=$c=='subject' ? "active" : ""?> btn btn-info">Subject</a>
+			<a href="/?c=register" class="<?=$c=='register' ? "active" : ""?> btn btn-info">Register</a>
 			<?php
 			$message = "";
 			if (!empty($_SESSION["success"])) {

@@ -44,7 +44,7 @@ class StudentController {
         $student->birthday = $_POST["birthday"];
         $student->gender = $_POST["gender"];
         if($studentRepository->update($student)) {
-            $_SESSION["success"] = "Đã cập nhật thành công";
+            $_SESSION["success"] = "Đã cập nhật môn học thành công";
         }
         else {
             $_SESSION["error"] = $studentRepository->error;
